@@ -19,10 +19,10 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     const data = await apiClient.getPlayerDeathCount(uuid);
 
     const reply = `
-💀 **Death Count - ${data.name}**
-Deaths: ${data.death_count}
-🆔 UUID: \`${data.uuid}\`
-    `.trim();
+      💀 **Death Count - ${data.name}**
+      Deaths: ${data.death_count}
+      🆔 UUID: \`${data.uuid}\`
+      `.trim();
 
     await interaction.editReply(reply);
   } catch (error: any) {
